@@ -1,0 +1,256 @@
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #f0f8ff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4169e1; 
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .logo a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar .logo a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu li {
+    margin: 0 15px;
+}
+
+.navbar .menu li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar .menu li a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    margin-left: 25px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 25px;
+}
+
+.hero-text {
+    max-width: 30%;
+}
+
+.hero-logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #4169e1; 
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #98ff98;
+    color: #4169e1; 
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #76d976; 
+    transform: scale(1.1);
+}
+
+.hero-image {
+    margin-left: 250px;
+}
+
+.hero-image img {
+    max-width: 75%;
+    height: auto;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.hero-image img {
+    max-width: 75%;
+    height: auto;
+    animation: fadeIn 3s ease-in-out;
+}
+
+
+.registro {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.registro h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.registro form {
+    display: inline-block;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.registro form:hover {
+    transform: scale(1.05);
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group input[type="tel"],
+.input-group input[type="email"],
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="number"]:focus,
+.input-group input[type="tel"]:focus,
+.input-group input[type="email"]:focus,
+.input-group select:focus {
+    border-color: #98ff98; 
+    box-shadow: 0 0 8px rgba(152, 255, 152, 0.2);
+    outline: none;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 14px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    display: none;
+}
+
+.input-group.error input,
+.input-group.error select {
+    border-color: #ff6b6b;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #4169e1; 
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #003cb3; 
+    transform: scale(1.05);
+}
+
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4169e1; 
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 5px 0;
+}

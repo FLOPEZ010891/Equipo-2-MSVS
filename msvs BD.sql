@@ -7,10 +7,13 @@ CREATE TABLE Usuario (
     UserName VARCHAR(50),
     Password VARCHAR(50),
     Nombre VARCHAR(100),
-    Dirección VARCHAR(200),
+    Direccion VARCHAR(200),
     Rol VARCHAR(50),
-    EscuelaOTrabajo VARCHAR(100),
-    Edad INT
+    Ocupacion VARCHAR(100),
+    Edad INT,
+    Genero VARCHAR(50),
+    Telefono VARCHAR(15),
+    Email VARCHAR(50)
 );
 
 -- TABLA UNIDAD DE SALUD
@@ -25,9 +28,18 @@ CREATE TABLE UnidadDeSalud (
 CREATE TABLE Tamizaje (
     IdTamizaje INT PRIMARY KEY AUTO_INCREMENT,
     IdUsuario INT,
-    Fecha DATE,
-    Preguntas VARCHAR(500),
-    Puntaje INT,
+    FechaAudit DATE,
+    PuntajeAudit INT,
+    FechaPosit DATE,
+    PuntajePosit INT,
+    FechaDesesperanza DATE,
+    PuntajeDesesperanza INT,
+    FechaAnsiedad DATE,
+    PuntajeAnsiedad INT,
+    FechaDepresion DATE,
+    PuntajeDepresion INT,
+    FechaFargestrom DATE,
+    PuntajeFargestrom INT,
     FOREIGN KEY (IdUsuario) REFERENCES Usuario(IdUsuario)
 );
 
