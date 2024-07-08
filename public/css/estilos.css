@@ -1,0 +1,499 @@
+/* Reset básico y estilos generales */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #DDC9A3; 
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #691B31; 
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .logo a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar .logo a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu li {
+    margin: 0 15px;
+}
+
+.navbar .menu li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar .menu li a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Estilos del hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #FFFFFF;
+    margin-left: 25px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 25px;
+}
+
+.hero-text {
+    max-width: 30%;
+}
+
+.hero-logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #691B31; 
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #691B31; 
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #A83246; 
+    transform: scale(1.1);
+}
+
+.hero-image {
+    margin-left: 250px;
+}
+
+.hero-image img {
+    max-width: 75%;
+    height: auto;
+}
+/* Animación de fadeIn para las imágenes */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.hero-image img {
+    max-width: 75%;
+    height: auto;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Estilos de la sección de registro */
+.registro {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.registro h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.registro form {
+    display: inline-block;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.registro form:hover {
+    transform: scale(1.05);
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group input[type="tel"],
+.input-group input[type="email"],
+.input-group input[type="password"], 
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="number"]:focus,
+.input-group input[type="tel"]:focus,
+.input-group input[type="email"]:focus,
+.input-group select:focus {
+    border-color: #691B31;
+    box-shadow: 0 0 8px rgba(105, 27, 49, 0.2);
+    outline: none;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 14px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    display: none;
+}
+
+.input-group.error input,
+.input-group.error select {
+    border-color: #ff6b6b;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #691B31;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #A83246;
+    transform: scale(1.05);
+}
+
+/* Estilos de la tabla personalizada */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.custom-table th {
+    background: #f4f4f9;
+    font-weight: bold;
+}
+
+.profile-image {
+    width: 70px; 
+    height: 70px; 
+    object-fit: cover; 
+    border-radius: 50%;
+}
+
+.custom-table td {
+    vertical-align: middle; 
+}
+
+
+/* Estilos de los botones de edición y eliminación */
+.btn-edit {
+    background-color: #A83246; 
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.btn-delete {
+    background-color: #DDC9A3; 
+    color: #fff; 
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-edit:hover, .btn-delete:hover {
+    opacity: 0.8;
+}
+
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.action-buttons .btn {
+    margin-right: 5px;
+}
+
+
+/* Estilos del pie de página */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #98989A; 
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Estilos de la sección de inicio de sesión */
+.login {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.login h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login form {
+    display: inline-block;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.login form:hover {
+    transform: scale(1.05);
+}
+
+.login-links {
+    margin-top: 20px;
+}
+
+.login-links a {
+    display: block;
+    color: #691B31;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 10px;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Estilos de la sección de autocuidado */
+.autocuidado-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.autocuidado-content {
+    flex: 1;
+    text-align: center;
+}
+
+.autocuidado-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    color: #691B31;
+    margin-bottom: 20px;
+}
+
+.autocuidado-description {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.imagen-principal {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.imagen-principal:hover {
+    transform: scale(1.05);
+}
+
+.imagen-animada {
+    max-width: 50%;
+    height: auto;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+.imagen-animada:hover {
+    transform: scale(1.05);
+}
+
+.autocuidado-sidebar {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.autocuidado-sidebar button {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #691B31;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.autocuidado-sidebar button:hover {
+    background-color: #A83246;
+    transform: scale(1.05);
+}
+
+#contenidoRelacionado img {
+    max-width: 50%;
+    height: auto;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+#contenidoRelacionado img:hover {
+    transform: scale(1.05);
+}
+
+#contenidoRelacionado p {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el formulario de búsqueda */
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+    display: flex; /* Alinear elementos horizontalmente */
+}
+
+.input-group input[type="text"] {
+    flex: 1; /* El input ocupa todo el espacio restante */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #691B31; /* Color de fondo de tu botón */
+    color: #ffffff; /* Color de texto */
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.input-group button[type="submit"]:hover {
+    background-color: #A83246; /* Color de fondo al pasar el mouse */
+    transform: scale(1.05);
+}
