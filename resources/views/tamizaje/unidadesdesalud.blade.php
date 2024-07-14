@@ -39,15 +39,18 @@
             </thead>
             <tbody>
                 @foreach ($unidadesdesalud as $unidaddesalud)
-                 
+                 <?php
+                 $ubicacionUnidad= $unidaddesalud->Ubicación;
+                 $mail= $unidaddesalud->email;
+                 ?>
                 <tr>
                     <td>{{$unidaddesalud->Nombre}}</td>
                     <td>{{$unidaddesalud->Especialidades}}</td>
                     <td>{{$unidaddesalud->domicilio}}</td>
                     <td>{{$unidaddesalud->telefono}}</td>
                     <td>{{$unidaddesalud->horarioAtencion}}</td>
-                    <td><a href="mailto:">{{$unidaddesalud->email}}</a></td>
-                    <td><a href="$unidaddesalud->Ubicación">{{$unidaddesalud->Ubicación}}</a></td>
+                    <td><a href="mailto:<?php echo $mail?>">{{$unidaddesalud->email}}</a></td>
+                    <td><a href="<?php echo $ubicacionUnidad; ?>">{{$unidaddesalud->Ubicación}}</a></td>
                 </tr>
                 
                 @endforeach
