@@ -42,11 +42,11 @@ Route::resource('usuarios', UsuariosController::class);
 Route::get('/autocuidado', [AutocuidadoController::class, 'index'])->name('autocuidado');
 
 
-Route::get('/tamizaje', [TamizajeController::class, 'index'])->name('tamizaje.index');
-Route::get('/tamizaje/desesperanza', [TamizajeController::class, 'desesperanza'])->name('tamizaje.desesperanza');
-Route::post('/tamizaje/save', [TamizajeController::class, 'save'])->name('tamizaje.save');
-Route::get('tamizaje/unidadesdesalud', [TamizajeController::class, 'unidades'])->name('unidadesdesalud.index');
-Route::get('unidadesdesalud', [UnidaddesaludController::class],'index')->name('unidadesdesalud');
+Route::get('/tamizaje', [TamizajeController::class, 'index'])->name('tamizaje.index')->middleware('auth');
+Route::get('/tamizaje/desesperanza', [TamizajeController::class, 'desesperanza'])->name('tamizaje.desesperanza')->middleware('auth');
+Route::post('/tamizaje/save', [TamizajeController::class, 'save'])->name('tamizaje.save')->middleware('auth');
+Route::get('tamizaje/unidadesdesalud', [TamizajeController::class, 'unidades'])->name('unidadesdesalud.index')->middleware('auth');
+Route::get('unidadesdesalud', [UnidaddesaludController::class],'index')->name('unidadesdesalud')->middleware('auth');
 
 
 Route::middleware(['auth'])->group(function () {

@@ -33,6 +33,28 @@ class TamizajeController extends Controller
 
     public function save(Request $request)
     {
+        $request->validateWithBag('customBag',[
+            'r1' => 'required',
+            'r2' => 'required',
+            'r3' => 'required',
+            'r4' => 'required',
+            'r5' => 'required',
+            'r6' => 'required',
+            'r7' => 'required',
+            'r8' => 'required',
+            'r9' => 'required',
+            'r10' => 'required',
+            'r11' => 'required',
+            'r12' => 'required',
+            'r13' => 'required',
+            'r14' => 'required',
+            'r15' => 'required',
+            'r16' => 'required',
+            'r17' => 'required',
+            'r18' => 'required',
+            'r19' => 'required',
+            'r20' => 'required',
+        ]);
         // Obtener respuestas del formulario
         $responses = $request->only(['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7', 'r8', 'r9', 'r10', 'r11', 'r12', 'r13', 'r14', 'r15', 'r16', 'r17', 'r18', 'r19', 'r20']);
 
