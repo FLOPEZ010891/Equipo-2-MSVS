@@ -44,7 +44,9 @@ Route::get('/autocuidado', [AutocuidadoController::class, 'index'])->name('autoc
 
 Route::get('/tamizaje', [TamizajeController::class, 'index'])->name('tamizaje.index')->middleware('auth');
 Route::get('/tamizaje/desesperanza', [TamizajeController::class, 'desesperanza'])->name('tamizaje.desesperanza')->middleware('auth');
+Route::get('/tamizaje/audit', [TamizajeController::class, 'audit'])->name('tamizaje.audit')->middleware('auth');
 Route::post('/tamizaje/save', [TamizajeController::class, 'save'])->name('tamizaje.save')->middleware('auth');
+Route::post('/tamizaje/saveaudit', [TamizajeController::class, 'saveaudit'])->name('tamizaje.saveaudit')->middleware('auth');
 Route::get('tamizaje/unidadesdesalud', [TamizajeController::class, 'unidades'])->name('unidadesdesalud.index')->middleware('auth');
 Route::get('unidadesdesalud', [UnidaddesaludController::class],'index')->name('unidadesdesalud')->middleware('auth');
 
