@@ -162,7 +162,7 @@ class TamizajeController extends Controller
         if ($puntuacion <= 3) {
             $mensaje = "Estimad@ " . auth()->user()->name . ", en relación con el puntaje obtenido en el Tamizaje, te informamos que los resultados corresponden a sin riesgo. Te sugerimos sigas cuidando de tu salud mental a través de las recomendaciones que te dejamos en esta página.";
         } elseif ($puntuacion > 3 && $puntuacion < 8) {
-            $mensaje = "Estimad@ " . auth()->user()->name . ", en relación con el puntaje obtenido en la escala del Tamizaje, te informamos que los resultados sugieren que empeza a tener problemas con el alcohol. Te invitamos a visitar tu unidad de salud más cercana a tu domicilio o puedes marcar a la línea de la vida al 800 911 2000 para recibir asesoría.";
+            $mensaje = "Estimad@ " . auth()->user()->name . ", en relación con el puntaje obtenido en la escala del Tamizaje, te informamos que los resultados sugieren algunos problemas con el alcohol. Te invitamos a visitar tu unidad de salud más cercana a tu domicilio o puedes marcar a la línea de la vida al 800 911 2000 para recibir asesoría.";
         } elseif ($puntuacion >= 8) {
             $mensaje = "Estimad@ " . auth()->user()->name . ", en relación con el puntaje obtenidos en la escala del Tamizaje, te informamos que los resultados sugieren un riesgo elevado. Recibirás la llamada del personal que integra el programa para iniciar con el proceso de atención, en la que se te hará una devolución de tus resultados.";
         }
