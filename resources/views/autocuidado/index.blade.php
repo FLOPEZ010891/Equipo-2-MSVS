@@ -27,33 +27,31 @@ function mostrarImagen(seccion) {
     contenidoPrincipal.style.display = 'none';
     contenidoRelacionado.style.display = 'block';
 
-    let imagen, mensaje;
+    let contenido;
     switch (seccion) {
         case 'alimentacion':
-            imagen = '<img src="{{ asset('img/alimentacion.jpg') }}" alt="Alimentación Saludable" class="imagen-animada">';
-            mensaje = '<p>Consejos sobre alimentación saludable.</p>';
+            contenido = '<img src="{{ asset('img/alimentacion.jpg') }}" alt="Alimentación Saludable" class="imagen-animada">';
+            contenido += '<p>Consejos sobre alimentación saludable.</p>';
+            contenido += '<iframe width="560" height="315" src="https://www.youtube.com/embed/dxH__2x0p-I?si=p50bFxLTGbpiXmU9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
             break;
         case 'higiene':
-            imagen = '<img src="{{ asset('img/higiene.jpg') }}" alt="Higiene del Sueño" class="imagen-animada">';
-            mensaje = '<p>Consejos sobre higiene del sueño.</p>';
+            contenido = '<img src="{{ asset('img/higiene.jpg') }}" alt="Higiene del Sueño" class="imagen-animada">';
+            contenido += '<p>Consejos sobre higiene del sueño.</p>';
             break;
         case 'ejercicio':
-            imagen = '<img src="{{ asset('img/ejercicio.jpg') }}" alt="Rutinas de Ejercicio" class="imagen-animada">';
-            mensaje = '<p>Consejos sobre rutinas de ejercicio.</p>';
+            contenido = '<img src="{{ asset('img/ejercicio.jpg') }}" alt="Higiene del Sueño" class="imagen-animada">';
+            contenido += '<p>Rutinas de ejercicio para mantenerte en forma.</p>';
             break;
         case 'estres':
-            imagen = '<img src="{{ asset('img/estres.jpg') }}" alt="Manejo del Estrés" class="imagen-animada">';
-            mensaje = '<p>Consejos sobre manejo del estrés.</p>';
+            contenido = '<img src="{{ asset('img/estres.jpg') }}" alt="Manejo del Estrés" class="imagen-animada">';
+            contenido += '<p>Consejos sobre manejo del estrés.</p>';
             break;
         case 'senales':
-            imagen = '<img src="{{ asset('img/senales.jpg') }}" alt="Señales de Alarma" class="imagen-animada">';
-            mensaje = '<p>Señales de alarma que debes tener en cuenta.</p>';
+            contenido = '<img src="{{ asset('img/senales.jpg') }}" alt="Señales de Alarma" class="imagen-animada">';
+            contenido += '<p>Señales de alarma a tener en cuenta.</p>';
             break;
-        default:
-            imagen = '';
-            mensaje = '';
     }
 
-    contenidoRelacionado.innerHTML = mensaje + imagen;
+    contenidoRelacionado.innerHTML = contenido;
 }
 </script>
