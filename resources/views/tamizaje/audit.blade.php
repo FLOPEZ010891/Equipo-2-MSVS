@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="contenedor-pregunta">
-                    <h2>2. ¡Cuántas copas se toma en un día típico de los que bebe?</h2>
+                    <h2>2. ¿Cuántas copas se toma en un día típico de los que bebe?</h2>
                     <div class="opciones">
                         <p><input type="radio" name="r2" value="0">1 o 2</p>
                         <p><input type="radio" name="r2" value="1">3 o 4</p>
