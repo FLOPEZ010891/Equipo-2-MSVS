@@ -115,12 +115,14 @@ class TamizajeController extends Controller
 
         // Guardar en la base de datos
         $date = now();
-        DB::table('tamizaje')->insert([
-            'FechaDesesperanza' => $date,
-            'PuntajeDesesperanza' => $puntuacion,
-            'user_id' => auth()->user()->id,
-            'user_name' => auth()->user()->name,
-        ]);
+        DB::table('tamizaje')->updateOrInsert(
+            ['user_id' => auth()->user()->id], // Condición para encontrar el registro existente
+            [
+                'FechaDesesperanza' => $date,
+                'PuntajeDesesperanza' => $puntuacion,
+                'user_name' => auth()->user()->name,
+            ]
+        );
 
         // Determinar el mensaje según la puntuación
         if ($puntuacion <= 8) {
@@ -168,12 +170,14 @@ class TamizajeController extends Controller
 
         // Guardar en la base de datos
         $date = now();
-        DB::table('tamizaje')->insert([
-            'FechaAudit' => $date,
-            'PuntajeAudit' => $puntuacion,
-            'user_id' => auth()->user()->id,
-            'user_name' => auth()->user()->name,
-        ]);
+        DB::table('tamizaje')->updateOrInsert(
+            ['user_id' => auth()->user()->id], // Condición para encontrar el registro existente
+            [
+                'FechaAudit' => $date,
+                'PuntajeAudit' => $puntuacion,
+                'user_name' => auth()->user()->name,
+            ]
+        );
 
         // Determinar el mensaje según la puntuación
         if ($puntuacion <= 3) {
@@ -230,12 +234,14 @@ class TamizajeController extends Controller
 
         // Guardar en la base de datos
         $date = now();
-        DB::table('tamizaje')->insert([
-            'FechaAnsiedad' => $date,
-            'PuntajeAnsiedad' => $puntuacion,
-            'user_id' => auth()->user()->id,
-            'user_name' => auth()->user()->name,
-        ]);
+        DB::table('tamizaje')->updateOrInsert(
+            ['user_id' => auth()->user()->id], // Condición para encontrar el registro existente
+            [
+                'FechaAnsiedad' => $date,
+                'PuntajeAnsiedad' => $puntuacion,
+                'user_name' => auth()->user()->name,
+            ]
+        );
 
         // Determinar el mensaje según la puntuación
         if ($puntuacion <= 5) {
