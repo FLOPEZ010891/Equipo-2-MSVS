@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementById('registroForm');
     var inputs = form.querySelectorAll('input, select');
