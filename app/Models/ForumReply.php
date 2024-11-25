@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ForumPost extends Model
+class ForumReply extends Model
 {
     use HasFactory;
 
@@ -13,29 +13,22 @@ class ForumPost extends Model
      * Las columnas que pueden ser asignadas masivamente.
      */
     protected $fillable = [
+        'post_id',
         'user_id',
         'user_name',
         'content',
-        'published_at',
     ];
 
     /**
-     * Castear columnas a tipos específicos.
+     * Relación inversa: cada respuesta pertenece a un post.
      */
-    protected $casts = [
-        'published_at' => 'datetime',
-    ];
-
-    /**
-     * Relación: un post puede tener muchas respuestas.
-     */
-    public function replies()
+    public function post()
     {
-        return $this->hasMany(ForumReply::class, 'post_id');
+        return $this->belongsTo(ForumPost::class);
     }
 
     /**
-     * Relación inversa: un post pertenece a un usuario.
+     * Relación inversa: cada respuesta pertenece a un usuario.
      */
     public function user()
     {
