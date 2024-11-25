@@ -1,7 +1,9 @@
+
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
     background-color: #DDC9A3; 
+
 }
 
 .navbar {
@@ -9,7 +11,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+
     background-color: #691B31; 
+
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
 }
@@ -55,12 +59,16 @@ body {
     font-weight: bold;
 }
 
+
+
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 50px 20px;
+
     background-color: #FFFFFF;
+
     margin-left: 25px;
 }
 
@@ -85,7 +93,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     margin-bottom: 20px;
+
     color: #691B31; 
+
 }
 
 .hero p {
@@ -97,8 +107,10 @@ body {
 .hero-button {
     display: inline-block;
     padding: 10px 20px;
+
     background-color: #691B31; 
     color: #FFFFFF;
+
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
@@ -108,7 +120,9 @@ body {
 }
 
 .hero-button:hover {
+
     background-color: #A83246; 
+
     transform: scale(1.1);
 }
 
@@ -136,6 +150,7 @@ body {
     animation: fadeIn 3s ease-in-out;
 }
 
+
 .registro {
     text-align: center;
     margin-top: 50px;
@@ -154,7 +169,9 @@ body {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
+
     background-color: #FFFFFF;
+
     width: 80%;
     max-width: 500px;
     margin: 0 auto;
@@ -199,8 +216,10 @@ body {
 .input-group input[type="tel"]:focus,
 .input-group input[type="email"]:focus,
 .input-group select:focus {
+
     border-color: #691B31; 
     box-shadow: 0 0 8px rgba(105, 27, 49, 0.2);
+
     outline: none;
 }
 
@@ -224,7 +243,9 @@ body {
     padding: 10px 0;
     border: none;
     border-radius: 5px;
+
     background-color: #691B31; 
+
     color: #ffffff;
     font-size: 18px;
     font-weight: bold;
@@ -234,6 +255,7 @@ body {
 }
 
 .submit-button:hover {
+
     background-color: #A83246; 
     transform: scale(1.05);
 }
@@ -242,6 +264,7 @@ body {
     text-align: center;
     padding: 20px;
     background-color: #98989A; 
+
     color: #ffffff;
     font-family: 'Lato', sans-serif;
     margin-top: 50px;
@@ -250,6 +273,7 @@ body {
 .footer p {
     margin: 5px 0;
 }
+
 
 h1{
     text-align: center;
@@ -324,3 +348,4 @@ button{
 .resultado{
     text-align: center;
 }
+
