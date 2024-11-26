@@ -38,18 +38,22 @@ function mostrarImagen(seccion) {
         case 'higiene':
             contenido = '<img src="{{ asset('img/higiene.jpg') }}" alt="Higiene del Sueño" class="imagen-animada">';
             contenido += '<p>Consejos sobre higiene del sueño.</p>';
+            contenido += '<iframe width="560" height="315" src="https://www.youtube.com/embed/CkacKAL0ius?si=xnsDzqqxt6WgW-K8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
             break;
         case 'ejercicio':
             contenido = '<img src="{{ asset('img/ejercicio.jpg') }}" alt="Higiene del Sueño" class="imagen-animada">';
             contenido += '<p>Rutinas de ejercicio para mantenerte en forma.</p>';
+            contenido += '<iframe width="560" height="315" src="https://www.youtube.com/embed/KddWUbmolfI?si=kyI1kg9O1RMmz-Zr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
             break;
         case 'estres':
             contenido = '<img src="{{ asset('img/estres.jpg') }}" alt="Manejo del Estrés" class="imagen-animada">';
             contenido += '<p>Consejos sobre manejo del estrés.</p>';
+            contenido += '<iframe width="560" height="315" src="https://www.youtube.com/embed/2JfnuCe74gQ?si=jyUjtHgfBlJY9c5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
             break;
         case 'senales':
             contenido = '<img src="{{ asset('img/senales.jpg') }}" alt="Señales de Alarma" class="imagen-animada">';
             contenido += '<p>Señales de alarma a tener en cuenta.</p>';
+            contenido += '<iframe width="560" height="315" src="https://www.youtube.com/embed/vfx_iDjVfmw?si=IRtwWWzqcLuHJ00D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
             break;
     }
 
