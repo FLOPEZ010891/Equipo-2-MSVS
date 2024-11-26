@@ -5,11 +5,15 @@
     </div>
     <ul class="menu">
         @guest
+
+            <li><a href="{{ route('autocuidado') }}">Autocuidado</a></li> 
             <li><a href="{{ route('login') }}">Inicio de sesión</a></li>
             <li><a href="{{ route('register') }}">Registro</a></li>
         @endguest
         @auth
+
             <li><a href="{{ route('autocuidado') }}">Autocuidado</a></li>
+
             <li><a href="{{ route('tamizaje.index') }}">Tamizajes</a></li>
             <li><a href="{{ route('forum.index') }}">Foros de ayuda</a></li>
             <li><a href="{{ route('usuarios.index') }}">Usuarios</a></li>

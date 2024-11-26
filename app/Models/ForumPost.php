@@ -5,9 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
+
 class ForumPost extends Model
 {
     use HasFactory;
+
 
     /**
      * Las columnas que pueden ser asignadas masivamente.
@@ -37,10 +40,12 @@ class ForumPost extends Model
     /**
      * Relación inversa: un post pertenece a un usuario.
      */
+
     public function user()
     {
         return $this->belongsTo(User::class);
     }
+
 
     /**
      * Accesor para obtener el nombre del usuario relacionado.
@@ -50,3 +55,4 @@ class ForumPost extends Model
         return $this->user->name ?? 'Usuario desconocido';
     }
 }
+

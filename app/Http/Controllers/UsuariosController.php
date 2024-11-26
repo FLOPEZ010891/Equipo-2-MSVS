@@ -73,6 +73,7 @@ class UsuariosController extends Controller
     }
 
     public function update(Request $request, User $usuario)
+
 {
     $request->validate([
         'name' => 'required',
@@ -111,3 +112,4 @@ class UsuariosController extends Controller
         return redirect()->route('usuarios.index')->with('success', 'Usuario eliminado correctamente.');
     }
 }
+

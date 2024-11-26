@@ -3,9 +3,11 @@
 @section('content')
 
 <div class="container mt-5">
-    <h1 class="text-center">Cédula de desesperanza</h1>
+
+    <h1 class="preguntash1">Cédula de desesperanza</h1>
     <form action="{{ route('tamizaje.save') }}" method="post">
         @csrf
+        <p>Indicaciones: Conesta todas las preguntas, elige verdadero o falso de acuerdo a tu situación.</p>
         <section id="preguntas">
             <div class="contenedor-pregunta">
                 <h2>1. Espero el futuro con esperanza y entusiasmo</h2>
@@ -151,6 +153,17 @@
         <div class="text-center mt-4">
             <button type="submit" class="btn btn-primary">Puntuar</button>
         </div>
+
+        @if ($errors->customBag->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->customBag->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
     </form>
 </div>
 

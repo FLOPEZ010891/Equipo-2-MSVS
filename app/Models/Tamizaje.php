@@ -12,30 +12,13 @@ class Tamizaje extends Model
     protected $table = 'tamizaje';
 
     protected $fillable = [
+
+        'IdTamizaje',
         'user_id',
         'user_name',
-        'fecha',
-        'pregunta1',
-        'pregunta2',
-        'pregunta3',
-        'pregunta4',
-        'pregunta5',
-        'pregunta6',
-        'pregunta7',
-        'pregunta8',
-        'pregunta9',
-        'pregunta10',
-        'pregunta11',
-        'pregunta12',
-        'pregunta13',
-        'pregunta14',
-        'pregunta15',
-        'pregunta16',
-        'pregunta17',
-        'pregunta18',
-        'pregunta19',
-        'pregunta20',
-        'puntaje',
+        'FechaDesespenranza',
+        'PuntajeDesesperanza',
+
     ];
 
     public function user()

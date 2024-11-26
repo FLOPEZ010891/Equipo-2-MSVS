@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\ForumPost;
 use App\Models\ForumReply;
 use Illuminate\Http\Request;
@@ -153,5 +154,6 @@ class ForumController extends Controller
         ]);
 
         return redirect()->route('forum.create')->with('success', 'Respuesta enviada con éxito.');
+
     }
 }
