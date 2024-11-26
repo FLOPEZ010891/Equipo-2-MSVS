@@ -3,6 +3,7 @@
 
 @section('content')
     <div class="container">
+
         <div class="alert alert-success" role="alert">
             <h3>Tus resultados se han guardado satisfactoriamente</h3>
             <p>{{ $mensaje }}</p>

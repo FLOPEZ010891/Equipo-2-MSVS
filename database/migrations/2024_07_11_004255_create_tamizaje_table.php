@@ -14,6 +14,7 @@ class CreateTamizajeTable extends Migration
     public function up()
     {
         Schema::create('tamizaje', function (Blueprint $table) {
+
             $table->IdTamizaje();
             $table->unsignedBigInteger('user_id');
             $table->string('user_name');
@@ -29,6 +30,7 @@ class CreateTamizajeTable extends Migration
             $table->integer('PuntajeDepresion')->nullable();
             $table->datetime('FechaFargestrom')>nullable();
             $table->integer('PuntajeFargestrom')->nullable();
+
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

@@ -27,6 +27,7 @@ function mostrarImagen(seccion) {
     contenidoPrincipal.style.display = 'none';
     contenidoRelacionado.style.display = 'block';
 
+
     let contenido;
     switch (seccion) {
         case 'alimentacion':
@@ -53,5 +54,6 @@ function mostrarImagen(seccion) {
     }
 
     contenidoRelacionado.innerHTML = contenido;
+
 }
 </script>

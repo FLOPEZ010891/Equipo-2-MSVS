@@ -12,11 +12,13 @@ class Tamizaje extends Model
     protected $table = 'tamizaje';
 
     protected $fillable = [
+
         'IdTamizaje',
         'user_id',
         'user_name',
         'FechaDesespenranza',
         'PuntajeDesesperanza',
+
     ];
 
     public function user()

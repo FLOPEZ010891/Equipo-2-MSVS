@@ -1,4 +1,5 @@
 
+
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
@@ -12,7 +13,9 @@ body {
     align-items: center;
     padding: 10px 20px;
 
+
     background-color: #691B31; 
+
 
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
@@ -60,7 +63,6 @@ body {
 }
 
 
-
 .hero {
     display: flex;
     align-items: center;
@@ -68,6 +70,7 @@ body {
     padding: 50px 20px;
 
     background-color: #FFFFFF;
+
 
     margin-left: 25px;
 }
@@ -274,7 +277,6 @@ body {
     margin: 5px 0;
 }
 
-
 h1{
     text-align: center;
     background: #691B31;
@@ -348,4 +350,5 @@ button{
 .resultado{
     text-align: center;
 }
+
 
